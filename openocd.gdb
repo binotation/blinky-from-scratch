@@ -7,8 +7,8 @@ set print asm-demangle on
 set backtrace limit 32
 
 # detect unhandled exceptions, hard faults and panics
-break DefaultHandler
-break HardFault
+break Default_Handler
+break HardFault_Handler
 # # run the next few lines so the panic message is printed immediately
 # # the number needs to be adjusted for your panic handler
 # commands $bpnum
@@ -34,4 +34,4 @@ break _start
 load
 
 # start the process but immediately halt the processor
-stepi
+continue
