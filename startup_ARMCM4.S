@@ -1,3 +1,4 @@
+/* Source: ARM GNU Toolchain samples */
 /* File: startup_ARMCM4.S
  * Purpose: startup file for Cortex-M4 devices. Should use with
  *   GCC for ARM Embedded Processors
@@ -85,7 +86,7 @@ __isr_vector:
 	.long	0                     /* Reserved */
 	.long	PendSV_Handler        /* PendSV Handler */
 	.long	SysTick_Handler       /* SysTick Handler */
-	.long	WWDG_IRQHandler
+	.long	WWDG_IRQHandler		  /* Source: STM32CubeL4 Examples - startup_stm32l432kcux.s */
 	.long	PVD_PVM_IRQHandler
 	.long	TAMP_STAMP_IRQHandler
 	.long	RTC_WKUP_IRQHandler
